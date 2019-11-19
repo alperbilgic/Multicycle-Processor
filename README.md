@@ -85,39 +85,71 @@ Mapping of bits:
 A sample code was loaded to the memory for test. Which can be written in assembly language as follows:
 
   MOV R0, #5;
+  
   MOV R1, #2;
+  
   STR R0, #26;
+  
   AND R3, R4;
+  
   SUB R0, R0, R1;
+  
   BL sub1
+  
   BL sub2
+  
   BL sub3
+  
   END
 
-sub 1   MOV R0, #0;
+sub 1   
+        MOV R0, #0;
+        
         MOV R1, #25;
+        
         SUB R0, R1;
+        
         BX  LR
 
-sub2    LDR R0, #164;
+sub2    
+        LDR R0, #164;
+        
         LDR R1, #168;
+        
         ADD R0, R0, R1;
+        
         LDR R1, #172;
+        
         ADD R0, R0, R1;
+        
         LDR R1, #176;
+        
         ADD R0, R0, R1;
+        
         LDR R1, #180;
+        
         ADD R0, R0, R1;
 
-sub3    MOV R0, #88;
+sub3    
+        MOV R0, #88;
+        
         LSL R1, R0;
+        
         MOV R2, #12;
+        
         SUBS R1, R2;
+        
         BEQ ;
+        
         LSL R0, #4;
+        
         ROR R0, #4;
+        
         BUN end
-branch  LSR R0, #1;
+branch  
+        LSR R0, #1;
+        
         ROL R0, #4;
+        
 end     BX  LR
         
