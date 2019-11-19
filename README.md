@@ -11,75 +11,75 @@ The designed architecture has one memory module that includes data and instructi
 ##Instruction Set
 ##### Branch Operations
 
-  BUN (Branch Unconditionally)      // Func = 0000 \n
-  BEQ (Branch if Equal)             // Func = 0001
-  BNE (Branch if Not Equal)         // Func = 0010
-  BCE (Branch if zero)              // Func = 0011
-  BCN (Branch if not zero)          // Func = 0100
-  BL  (Branch with link)            // Func = 0101
-  BIL (Branch indirect with link)   // Func = 0111
-  BX  (Return from subroutine)      // Func = 1000
+  BUN (Branch Unconditionally)      // Func = 0000  
+  BEQ (Branch if Equal)             // Func = 0001  
+  BNE (Branch if Not Equal)         // Func = 0010  
+  BCE (Branch if zero)              // Func = 0011  
+  BCN (Branch if not zero)          // Func = 0100  
+  BL  (Branch with link)            // Func = 0101  
+  BIL (Branch indirect with link)   // Func = 0111  
+  BX  (Return from subroutine)      // Func = 1000  
 
 ##### Shift Operations
 
-  LSR (Logic Shift Right)           // Func = 0001
-  LSL (Logical Shift Left)          // Func = 0101
-  ASR (Arithmetic Shift Right)      // Func = 0010
-  ROR (Rotate Right)                // Func = 0011
-  ROL (Rotate Left)                 // Func = 0100
+  LSR (Logic Shift Right)           // Func = 0001  
+  LSL (Logical Shift Left)          // Func = 0101  
+  ASR (Arithmetic Shift Right)      // Func = 0010  
+  ROR (Rotate Right)                // Func = 0011  
+  ROL (Rotate Left)                 // Func = 0100  
   
 ##### Memory Operations
   
-  MOV (Move immediate value to the register)      // Func = 0000 
-  LDR (Load value from one register to another)   // Func = 0010
-  STR (Store value to the given address)          // Func = 0001
+  MOV (Move immediate value to the register)      // Func = 0000   
+  LDR (Load value from one register to another)   // Func = 0010  
+  STR (Store value to the given address)          // Func = 0001  
   
 ##### Arithmetic Operations
 
-  ADD (Addition)      // Func = 1000
-  SUB (Subtraction)   // Func = 1001
+  ADD (Addition)      // Func = 1000  
+  SUB (Subtraction)   // Func = 1001  
   
 ##### Logic Operations
 
-  AND (Bitwise and operation)   // Func = 1010
-  OR  (Bitwise or operation)    // Func = 1011
-  EOR (Bitwise exor operation)  // Func = 1100
-  CLR (Clear)                   // Func = 1101
+  AND (Bitwise and operation)   // Func = 1010   
+  OR  (Bitwise or operation)    // Func = 1011  
+  EOR (Bitwise exor operation)  // Func = 1100  
+  CLR (Clear)                   // Func = 1101  
   
-##Finding Binary Equivalent of an Instruction
+##Finding Binary Equivalent of an Instruction  
 
-Mapping of bits:
-  2 Bits | 4 Bits| 3 Bits| 3 Bits|  8 Bits
-    OP   | Func  | Reg 1 | Reg 2 | Immediate
-    OP: Operation type ( Memory = 01, branch = 10, arithmetic or logic = 00)
-    Func: Specific key for instruction (Given above for each instruction)
-    Reg 1: Destination register address
-    Reg 2: Secondary register address
-    Immediate: Immediate value (if needed)
+Mapping of bits:  
+  2 Bits | 4 Bits| 3 Bits| 3 Bits|  8 Bits  
+    OP   | Func  | Reg 1 | Reg 2 | Immediate  
+    OP: Operation type ( Memory = 01, branch = 10, arithmetic or logic = 00)  
+    Func: Specific key for instruction (Given above for each instruction)  
+    Reg 1: Destination register address  
+    Reg 2: Secondary register address  
+    Immediate: Immediate value (if needed)  
 
-* LDR	R1, [#imm]  (imm -> immediate)
-  01_00XX_001_001_00110000
+* LDR	R1, [#imm]  (imm -> immediate)  
+  01_00XX_001_001_00110000   
 
-* MOV	R1, #imm
-  01_01XX_001_001_00001000
+* MOV	R1, #imm  
+  01_01XX_001_001_00001000  
 
-* STR	R1, [#imm]
-  01_10XX_001_001_00110000
+* STR	R1, [#imm]  
+  01_10XX_001_001_00110000  
 
-* SHIFT	R1, R2, #imm  
-  00_0[shft]_010_001_00010000   (shft -> type of shift operation)
+* SHIFT	R1, R2, #imm    
+  00_0[shft]_010_001_00010000   (shft -> type of shift operation)  
 
-* AR&LOG	R1, R2, #imm  (Arithmetic & Logic Operations)
-  00_1[oper]_010_001_00001100 (oper -> Operation)
+* AR&LOG	R1, R2, #imm  (Arithmetic & Logic Operations)  
+  00_1[oper]_010_001_00001100 (oper -> Operation)  
 
-* BRA	loop    (Any branch operation BX aside)
-  10_0[cond]_ difference  (cond -> Condition, difference -> offset from the instant address of instruction)
+* BRA	loop    (Any branch operation BX aside)  
+  10_0[cond]_ difference  (cond -> Condition, difference -> offset from the instant address of instruction)  
 
-* BX	LR
-  10_1XXX_XXXXXXXXXXXXXX
+* BX	LR  
+  10_1XXX_XXXXXXXXXXXXXX  
 
-* END
-  11_XXXX_XXXXXXXXXXXXXX
+* END  
+  11_XXXX_XXXXXXXXXXXXXX  
 
 
 A sample code was loaded to the memory for test. Which can be written in assembly language as follows:
