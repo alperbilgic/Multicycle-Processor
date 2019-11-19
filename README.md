@@ -57,28 +57,28 @@ Mapping of bits:
     Reg 2: Secondary register address
     Immediate: Immediate value (if needed)
 
-*LDR	R1, [#imm]  (imm -> immediate)
+* LDR	R1, [#imm]  (imm -> immediate)
   01_00XX_001_001_00110000
 
-*MOV	R1, #imm
+* MOV	R1, #imm
   01_01XX_001_001_00001000
 
-*STR	R1, [#imm]
+* STR	R1, [#imm]
   01_10XX_001_001_00110000
 
-*SHIFT	R1, R2, #imm  
+* SHIFT	R1, R2, #imm  
   00_0[shft]_010_001_00010000   (shft -> type of shift operation)
 
-*AR&LOG	R1, R2, #imm  (Arithmetic & Logic Operations)
+* AR&LOG	R1, R2, #imm  (Arithmetic & Logic Operations)
   00_1[oper]_010_001_00001100 (oper -> Operation)
 
-*BRA	loop    (Any branch operation BX aside)
+* BRA	loop    (Any branch operation BX aside)
   10_0[cond]_ difference  (cond -> Condition, difference -> offset from the instant address of instruction)
 
-*BX	LR
+* BX	LR
   10_1XXX_XXXXXXXXXXXXXX
 
-*END
+* END
   11_XXXX_XXXXXXXXXXXXXX
 
 
