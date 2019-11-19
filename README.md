@@ -9,7 +9,7 @@ To simulate the project truely one of fourthData.bdf or fourthData.v files shoul
 
 The designed architecture has one memory module that includes data and instructions at the same time. The instructions start at the beginning address and data comes after the end of instructions. At first the instruction register is loaded be zeros. By the end of an instruction, the instruction register is incremented to read the next instruction. 
 
-##Instruction Set
+#### Instruction Set
 ##### Branch Operations
 
   BUN (Branch Unconditionally)      // Func = 0000  
@@ -47,7 +47,7 @@ The designed architecture has one memory module that includes data and instructi
   EOR (Bitwise exor operation)  // Func = 1100  
   CLR (Clear)                   // Func = 1101  
   
-##Finding Binary Equivalent of an Instruction  
+#### Finding Binary Equivalent of an Instruction  
 
 Mapping of bits:  
   2 Bits | 4 Bits| 3 Bits| 3 Bits|  8 Bits  
