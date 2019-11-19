@@ -1,7 +1,8 @@
 # Multicycle-Processor
 Verilog Implementation of a simple multicycle processor
-
-
+  
+  
+  
 This repository presents a Central Process Unit that has multicycle architecture. The main structure is given in fourthData.bdf file. This structure includes several components as different types of Registers, Multiplexers, an Algorithmic Logic Unit(ALU), RAM, Register File, Constant Value Generators and a Shifter. 
 
 To simulate the project truely one of fourthData.bdf or fourthData.v files should be taken out from the project folder. They can be generated from each other. To test the design, I personally use ModelSim to simulate. A brief explanation for its usage is given in https://www.nandland.com/vhdl/tutorials/tutorial-modelsim-simulation-walkthrough.html. Be sure that you added the test file and all the modules which fourthData files include. Quartus was the platform that the developement and the implementstion on the FPGA board is done. Intel provides a Quartus tutorial for beginners on the official website, https://www.intel.com › www › pdfs › literature.
