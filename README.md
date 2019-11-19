@@ -84,23 +84,15 @@ Mapping of bits:
 
 A sample code was loaded to the memory for test. Which can be written in assembly language as follows:
 
-  MOV R0, #5;
-  
-  MOV R1, #2;
-  
-  STR R0, #26;
-  
-  AND R3, R4;
-  
-  SUB R0, R0, R1;
-  
-  BL sub1
-  
-  BL sub2
-  
-  BL sub3
-  
-  END
+  MOV R0, #5;  
+  MOV R1, #2;  
+  STR R0, #26;  
+  AND R3, R4;  
+  SUB R0, R0, R1;  
+  BL sub1;   
+  BL sub2;  
+  BL sub3;  
+  END  
 
 sub 1   // takes 2's complement of 25
         
