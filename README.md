@@ -11,7 +11,7 @@ The designed architecture has one memory module that includes data and instructi
 ##Instruction Set
 ##### Branch Operations
 
-  BUN (Branch Unconditionally)      // Func = 0000
+  BUN (Branch Unconditionally)      // Func = 0000 \n
   BEQ (Branch if Equal)             // Func = 0001
   BNE (Branch if Not Equal)         // Func = 0010
   BCE (Branch if zero)              // Func = 0011
