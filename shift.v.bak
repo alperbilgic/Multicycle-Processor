@@ -1,0 +1,10 @@
+module shift (in, out, shiftVal, command);
+
+	input [1:0] command;
+	input [31:0] in;
+	input [31:0] shiftVal;
+	output [31:0] out;
+	
+	assign out = command[1] ? (command[0] ? in : (in << shiftVal)) : (command[0] ? (in >> shiftVal) : in);
+
+endmodule

@@ -1,0 +1,14 @@
+module controller ( clk, rst, flags, instructi, RegWrite, LRWrite, MemWrite, IRWrite, FlagUp, AdrSrc, ALUControl, ALUSrcB, ImmSrc, PCWrite, RegSrc, ResultSrc, ShftDcd, PC_Sel);
+	
+	input [3:0] flags;
+	input [19:0] instructi;
+	input rst, clk;
+	
+	output RegWrite, LRWrite, MemWrite, IRWrite, FlagUp, PC_Sel;
+	output [2:0] ALUControl, PCWrite, ShiftDcd;
+	output [1:0] AdrSrc, ALUSrcB, ImmSrc, RegSrc, ResultSrc;
+	
+	wire [1:0] op;
+	wire [3:0] func;
+	
+	

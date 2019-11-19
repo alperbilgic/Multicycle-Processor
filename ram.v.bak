@@ -1,0 +1,31 @@
+module ram #(parameter ADDR_WIDTH = 12, DATA_WIDTH = 32) (
+	clk,
+	addr,
+	out,
+	w,
+	in
+);
+	input clk, w;
+	input [31:0] addr;
+	output [31:0] out;
+
+	input [31:0] in;
+
+	reg [31:0] memory [100:0];
+
+initial begin
+	
+	memory[5] = 32'b00000000000000000000000000001010;
+	memory[17] = 32'b00000000000000000000000000001000;
+	
+end
+
+	assign out = memory[addr]; 
+	
+	always @(posedge clk) begin
+	if (w)
+		memory[addr] <= in;
+		
+	
+	end
+endmodule

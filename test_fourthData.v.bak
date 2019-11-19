@@ -1,0 +1,30 @@
+module test_fourthData (
+	rst,
+	clk,
+	RegWrite,
+	LRWrite,
+	MemWrite,
+	IRWrite,
+	ALUSrcA,
+	AdrSrc,
+	ALUControl,
+	ALUSrcB,
+	ImmSrc,
+	PCWrite,
+	RegSrc,
+	ResultSrc,
+	ShftDcd,
+	Z,
+	N,
+	C_out,
+	OVF,
+	instructi,
+	instruction,
+	PC,
+	RD1,
+	RD2,
+	WD
+	);
+	
+	
+	

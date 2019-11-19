@@ -1,0 +1,360 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// PROGRAM		"Quartus Prime"
+// VERSION		"Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+// CREATED		"Sat May 11 02:03:52 2019"
+
+module fourthData(
+	rst,
+	clk,
+	RegWrite,
+	LRWrite,
+	MemWrite,
+	IRWrite,
+	FlagUp,
+	PC_Sel,
+	AdrSrc,
+	ALUControl,
+	ALUSrcB,
+	ImmSrc,
+	PCWrite,
+	RegSrc,
+	ResultSrc,
+	ShftDcd,
+	Z,
+	N,
+	C_out,
+	OVF,
+	PCWr,
+	ALU,
+	flags,
+	instructi,
+	PCout,
+	ram_out,
+	RD1,
+	RD2,
+	WD
+);
+
+
+input wire	rst;
+input wire	clk;
+input wire	RegWrite;
+input wire	LRWrite;
+input wire	MemWrite;
+input wire	IRWrite;
+input wire	FlagUp;
+input wire	PC_Sel;
+input wire	[1:0] AdrSrc;
+input wire	[2:0] ALUControl;
+input wire	[1:0] ALUSrcB;
+input wire	[1:0] ImmSrc;
+input wire	[2:0] PCWrite;
+input wire	[1:0] RegSrc;
+input wire	[1:0] ResultSrc;
+input wire	[2:0] ShftDcd;
+output wire	Z;
+output wire	N;
+output wire	C_out;
+output wire	OVF;
+output wire	PCWr;
+output wire	[7:0] ALU;
+output wire	[3:0] flags;
+output wire	[19:0] instructi;
+output wire	[7:0] PCout;
+output wire	[19:0] ram_out;
+output wire	[7:0] RD1;
+output wire	[7:0] RD2;
+output wire	[7:0] WD;
+
+wire	[3:0] Flagin;
+wire	[3:0] Flags_ALTERA_SYNTHESIZED;
+wire	[19:0] instr;
+wire	[7:0] PC;
+wire	[19:0] ram;
+wire	[0:0] SYNTHESIZED_WIRE_0;
+wire	[7:0] SYNTHESIZED_WIRE_1;
+wire	[7:0] SYNTHESIZED_WIRE_35;
+wire	[7:0] SYNTHESIZED_WIRE_36;
+wire	[7:0] SYNTHESIZED_WIRE_4;
+wire	[7:0] SYNTHESIZED_WIRE_5;
+wire	[7:0] SYNTHESIZED_WIRE_6;
+wire	[7:0] SYNTHESIZED_WIRE_7;
+wire	[0:0] SYNTHESIZED_WIRE_8;
+wire	[0:0] SYNTHESIZED_WIRE_9;
+wire	[0:0] SYNTHESIZED_WIRE_10;
+wire	[0:0] SYNTHESIZED_WIRE_11;
+wire	SYNTHESIZED_WIRE_12;
+wire	SYNTHESIZED_WIRE_13;
+wire	[2:0] SYNTHESIZED_WIRE_14;
+wire	[2:0] SYNTHESIZED_WIRE_15;
+wire	[2:0] SYNTHESIZED_WIRE_18;
+wire	[7:0] SYNTHESIZED_WIRE_37;
+wire	[7:0] SYNTHESIZED_WIRE_38;
+wire	[7:0] SYNTHESIZED_WIRE_21;
+wire	[7:0] SYNTHESIZED_WIRE_22;
+wire	[7:0] SYNTHESIZED_WIRE_23;
+wire	[7:0] SYNTHESIZED_WIRE_25;
+wire	[7:0] SYNTHESIZED_WIRE_26;
+wire	[7:0] SYNTHESIZED_WIRE_39;
+wire	SYNTHESIZED_WIRE_29;
+wire	[7:0] SYNTHESIZED_WIRE_31;
+
+assign	PCWr = SYNTHESIZED_WIRE_0[0];
+assign	ALU = SYNTHESIZED_WIRE_39;
+assign	PCout = SYNTHESIZED_WIRE_36;
+assign	RD1 = SYNTHESIZED_WIRE_31;
+assign	RD2 = SYNTHESIZED_WIRE_37;
+assign	WD = SYNTHESIZED_WIRE_35;
+assign	SYNTHESIZED_WIRE_29 = 0;
+
+
+
+
+writeregister	b2v_inst(
+	.clk(clk),
+	.rst(rst),
+	.write(SYNTHESIZED_WIRE_0),
+	.in(SYNTHESIZED_WIRE_1),
+	.out(PC));
+	defparam	b2v_inst.W = 8;
+
+
+muxtwo	b2v_inst1(
+	.sel(PC_Sel),
+	.ina(SYNTHESIZED_WIRE_35),
+	.inb(SYNTHESIZED_WIRE_36),
+	.out(SYNTHESIZED_WIRE_1));
+	defparam	b2v_inst1.w = 8;
+
+
+
+writeregister	b2v_inst11(
+	.clk(clk),
+	.rst(rst),
+	.write(IRWrite),
+	.in(ram),
+	.out(instr));
+	defparam	b2v_inst11.W = 20;
+
+
+ALU	b2v_inst111(
+	.A(SYNTHESIZED_WIRE_4),
+	.B(SYNTHESIZED_WIRE_5),
+	.I(ALUControl),
+	.Z(Flagin[0]),
+	.N(Flagin[1]),
+	.C_out(Flagin[2]),
+	.OVF(Flagin[3]),
+	.F(SYNTHESIZED_WIRE_39));
+	defparam	b2v_inst111.W = 8;
+
+
+simpleregister	b2v_inst12(
+	.clk(clk),
+	.rst(rst),
+	.in(SYNTHESIZED_WIRE_6),
+	.out(SYNTHESIZED_WIRE_37));
+	defparam	b2v_inst12.W = 8;
+
+
+simpleregister	b2v_inst13(
+	.clk(clk),
+	.rst(rst),
+	.in(SYNTHESIZED_WIRE_7),
+	.out(SYNTHESIZED_WIRE_31));
+	defparam	b2v_inst13.W = 8;
+
+
+writeregister	b2v_inst14(
+	.clk(clk),
+	.rst(rst),
+	.write(FlagUp),
+	.in(Flagin),
+	.out(Flags_ALTERA_SYNTHESIZED));
+	defparam	b2v_inst14.W = 4;
+
+
+muxfour	b2v_inst15(
+	.ina(SYNTHESIZED_WIRE_8),
+	.inb(SYNTHESIZED_WIRE_9),
+	.inc(SYNTHESIZED_WIRE_10),
+	.ind(SYNTHESIZED_WIRE_11),
+	.sel(PCWrite[1:0]),
+	.out(SYNTHESIZED_WIRE_0));
+	defparam	b2v_inst15.w = 1;
+
+
+muxtwo	b2v_inst16(
+	.sel(PCWrite[2]),
+	.ina(Flags_ALTERA_SYNTHESIZED[2]),
+	.inb(SYNTHESIZED_WIRE_12),
+	.out(SYNTHESIZED_WIRE_11));
+	defparam	b2v_inst16.w = 1;
+
+
+muxtwo	b2v_inst17(
+	.sel(PCWrite[2]),
+	.ina(Flags_ALTERA_SYNTHESIZED[0]),
+	.inb(SYNTHESIZED_WIRE_13),
+	.out(SYNTHESIZED_WIRE_10));
+	defparam	b2v_inst17.w = 1;
+
+
+registerfile	b2v_inst18(
+	.clk(clk),
+	.rst(rst),
+	.WE(RegWrite),
+	.LRWrite(LRWrite),
+	.Add1(SYNTHESIZED_WIRE_14),
+	.Add2(SYNTHESIZED_WIRE_15),
+	.Add3(instr[10:8]),
+	.in(SYNTHESIZED_WIRE_35),
+	.PC(SYNTHESIZED_WIRE_36),
+	.out1(SYNTHESIZED_WIRE_7),
+	.out2(SYNTHESIZED_WIRE_6));
+	defparam	b2v_inst18.W = 8;
+
+
+constant_value	b2v_inst19(
+	.out(SYNTHESIZED_WIRE_9));
+	defparam	b2v_inst19.value = 1'b1;
+	defparam	b2v_inst19.W = 1;
+
+
+adder	b2v_inst2(
+	.A(PC),
+	.out(SYNTHESIZED_WIRE_36));
+
+
+constant_value	b2v_inst21(
+	.out(SYNTHESIZED_WIRE_8));
+	defparam	b2v_inst21.value = 1'b0;
+	defparam	b2v_inst21.W = 1;
+
+assign	SYNTHESIZED_WIRE_13 =  ~Flags_ALTERA_SYNTHESIZED[0];
+
+assign	SYNTHESIZED_WIRE_12 =  ~Flags_ALTERA_SYNTHESIZED[2];
+
+
+muxtwo	b2v_inst24(
+	.sel(RegSrc[0]),
+	.ina(instr[13:11]),
+	.inb(SYNTHESIZED_WIRE_18),
+	.out(SYNTHESIZED_WIRE_14));
+	defparam	b2v_inst24.w = 3;
+
+
+constant_value	b2v_inst25(
+	.out(SYNTHESIZED_WIRE_18));
+	defparam	b2v_inst25.value = 3'b111;
+	defparam	b2v_inst25.W = 3;
+
+
+muxfour	b2v_inst3(
+	.ina(SYNTHESIZED_WIRE_37),
+	.inb(SYNTHESIZED_WIRE_38),
+	.inc(SYNTHESIZED_WIRE_21),
+	.ind(SYNTHESIZED_WIRE_22),
+	.sel(ALUSrcB),
+	.out(SYNTHESIZED_WIRE_5));
+	defparam	b2v_inst3.w = 8;
+
+
+ram	b2v_inst5(
+	.clk(clk),
+	.w(MemWrite),
+	.addr(SYNTHESIZED_WIRE_23),
+	.in(SYNTHESIZED_WIRE_37),
+	.out(ram));
+
+
+muxfour	b2v_inst6(
+	.ina(SYNTHESIZED_WIRE_25),
+	.inb(SYNTHESIZED_WIRE_26),
+	.inc(SYNTHESIZED_WIRE_39),
+	.ind(SYNTHESIZED_WIRE_38),
+	.sel(ResultSrc),
+	.out(SYNTHESIZED_WIRE_35));
+	defparam	b2v_inst6.w = 8;
+
+
+simpleregister	b2v_inst7(
+	.clk(clk),
+	.rst(SYNTHESIZED_WIRE_29),
+	.in(SYNTHESIZED_WIRE_39),
+	.out(SYNTHESIZED_WIRE_25));
+	defparam	b2v_inst7.W = 8;
+
+
+muxtwo	b2v_inst9(
+	.sel(RegSrc[1]),
+	.ina(instr[2:0]),
+	.inb(instr[10:8]),
+	.out(SYNTHESIZED_WIRE_15));
+	defparam	b2v_inst9.w = 3;
+
+
+extend	b2v_inst99(
+	.ImmSrc(ImmSrc),
+	.in(instr[7:0]),
+	.out(SYNTHESIZED_WIRE_38));
+
+
+simpleregister	b2v_insta(
+	.clk(clk),
+	.rst(rst),
+	.in(ram[7:0]),
+	.out(SYNTHESIZED_WIRE_26));
+	defparam	b2v_insta.W = 8;
+
+
+shift	b2v_instt(
+	.command(ShftDcd),
+	.in(SYNTHESIZED_WIRE_31),
+	.shiftVal(SYNTHESIZED_WIRE_38),
+	.out(SYNTHESIZED_WIRE_4));
+
+
+muxfour	b2v_insttt(
+	.ina(PC),
+	.inb(SYNTHESIZED_WIRE_35),
+	.inc(SYNTHESIZED_WIRE_38),
+	
+	.sel(AdrSrc),
+	.out(SYNTHESIZED_WIRE_23));
+	defparam	b2v_insttt.w = 8;
+
+
+constant_value	b2v_zero(
+	.out(SYNTHESIZED_WIRE_22));
+	defparam	b2v_zero.value = 3'b100;
+	defparam	b2v_zero.W = 8;
+
+
+constant_value	b2v_zeroo(
+	.out(SYNTHESIZED_WIRE_21));
+	defparam	b2v_zeroo.value = 1'b0;
+	defparam	b2v_zeroo.W = 8;
+
+assign	Z = Flags_ALTERA_SYNTHESIZED[0];
+assign	N = Flags_ALTERA_SYNTHESIZED[1];
+assign	C_out = Flags_ALTERA_SYNTHESIZED[2];
+assign	OVF = Flags_ALTERA_SYNTHESIZED[3];
+assign	flags = Flags_ALTERA_SYNTHESIZED;
+assign	instructi = instr;
+assign	ram_out = ram;
+
+endmodule

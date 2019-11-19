@@ -1,0 +1,29 @@
+op, func, reg, reg, imm
+
+2, 4, 3, 3, 8 
+
+LDR	R1, [#imm]
+01_00XX_001_001_00110000
+
+MOV	R1, #imm
+01_01XX_001_001_00001000
+
+STR	R1, [#imm]
+01_10XX_001_001_00110000
+
+SHIFT	R1, R2, #imm
+00_0[shft]_010_001_00010000
+
+AR&LOG	R1, R2, #imm
+00_1[oper]_010_001_00001100
+
+BRA	loop
+10_0[cond]_ difference
+
+BX	LR
+10_1XXX_XXXXXXXXXXXXXX
+
+END
+11_XXXX_XXXXXXXXXXXXXX
+
+

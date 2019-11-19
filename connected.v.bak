@@ -1,0 +1,95 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// PROGRAM		"Quartus Prime"
+// VERSION		"Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+// CREATED		"Mon May 13 14:14:37 2019"
+
+module connected(
+	pin_name1
+);
+
+
+input wire	pin_name1;
+
+wire	SYNTHESIZED_WIRE_0;
+wire	SYNTHESIZED_WIRE_1;
+wire	SYNTHESIZED_WIRE_2;
+wire	SYNTHESIZED_WIRE_3;
+wire	SYNTHESIZED_WIRE_4;
+wire	SYNTHESIZED_WIRE_5;
+wire	[1:0] SYNTHESIZED_WIRE_6;
+wire	[2:0] SYNTHESIZED_WIRE_7;
+
+
+
+
+
+controller	b2v_inst(
+	
+	
+	.clk(pin_name1),
+	
+	
+	.rst(SYNTHESIZED_WIRE_3),
+	.RegWrite(SYNTHESIZED_WIRE_4),
+	.LRWrite(SYNTHESIZED_WIRE_2),
+	.MemWrite(SYNTHESIZED_WIRE_0),
+	.IRWrite(SYNTHESIZED_WIRE_5),
+	.FlagUp(SYNTHESIZED_WIRE_1),
+	
+	.AdrSrc(SYNTHESIZED_WIRE_6),
+	.ALUControl(SYNTHESIZED_WIRE_7)
+	
+	
+	
+	
+	
+	
+	);
+
+
+fourthData	b2v_inst1(
+	.clk(pin_name1),
+	.MemWrite(SYNTHESIZED_WIRE_0),
+	.FlagUp(SYNTHESIZED_WIRE_1),
+	.LRWrite(SYNTHESIZED_WIRE_2),
+	.rst(SYNTHESIZED_WIRE_3),
+	.RegWrite(SYNTHESIZED_WIRE_4),
+	.IRWrite(SYNTHESIZED_WIRE_5),
+	
+	.AdrSrc(SYNTHESIZED_WIRE_6),
+	.ALUControl(SYNTHESIZED_WIRE_7)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	);
+
+
+endmodule

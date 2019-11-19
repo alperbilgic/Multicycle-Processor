@@ -1,0 +1,43 @@
+module test_shift ();
+ 
+	reg reset;
+	reg [31:0] in;
+	reg [31:0] shiftVal;
+	reg [3:0] command;
+	
+	wire [31:0] OUT
+	
+	reg [3:0] vectornum, errors; // bookkeeping variables
+	reg [9:0] testvectors[20:0]; // array of testvectors
+	
+	ALP dut (.qq(qq), .Qout(Qout), .ACout(ACout), .clk(clk), .rst(rst), .OPin(OP), .CLRin(CLR), .COMPin(COMP), .loadin(load), .DATA_IN(DATA_IN), .OUT_1(OUT_1), .OUT_0(OUT_0), .ERR(ERR), .R0selout(R0selout)  );
+
+	
+always
+	begin
+	clk = 1; #5; clk = 0; #5;
+	end
+	
+initial
+	begin
+	$readmemh("testShift.tv", testvectors);
+	vectornum = 0; errors = 0;
+	reset = 1; #30; reset = 0;
+end
+
+always @(posedge clk)
+		begin
+		#1; {rst, load, COMP, CLR, OP, DATA_IN} = testvectors[vectornum];
+		end
+		
+		
+always @(negedge clk)
+	if (~reset) begin // skip during reset
+			// increment array index and read next testvector
+		vectornum = vectornum + 1;
+		if (testvectors[vectornum] === 7'bx) begin
+			$display("%d tests completed with %d errors",
+			vectornum, errors);
+		end
+	end
+endmodule

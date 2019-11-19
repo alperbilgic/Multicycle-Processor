@@ -1,0 +1,62 @@
+module test_registerfile ();
+
+	reg clk, reset, LR;
+	reg rst, write;
+	reg[31:0] in;
+	reg[63:0] o_exp;
+	reg[2:0] add1, add2, add3;
+	
+	
+	wire [31:0] out1;
+	wire [31:0] out2;
+
+	reg [4:0] vectornum, errors;
+	reg [30:0] testvectors[5:0];
+	
+	registerfile #(.W(8)) dut(.LRWrite(LR), .clk(clk), .rst(rst), .in(in), .out1(out1), .out2(out2), .WE(write), .Add1(add1), .Add2(add2), .Add3(add3));
+	
+	// clock generation
+	always
+		begin
+		clk = 1; #5; clk = 0; #5;
+		end
+		
+	// initial block for the beginning of the test
+	initial
+		begin
+		$readmemh("test_registerfile.tv", testvectors); // maybe memh for hex
+		vectornum = 0; errors = 0;
+		reset = 1; #30; reset = 0;
+		end
+	
+	// apply test vectors on rising edge of clk
+	always @(posedge clk)
+		begin
+		#1; {rst, write, Add1, Add2, Add3, in, o_exp} = testvectors[vectornum];
+		end
+		
+	// check results on falling edge of clk
+	always @(negedge clk)
+		begin
+		
+		if (~reset)	// skip during reset pulse
+			begin
+			if( {out1, out2} != o_exp)
+				begin
+				$display("Output = %h, %h (%h expected)", out1, out2 , o_exp); // %h for hex
+				errors = errors + 1;
+				end
+			
+			
+		// increment array index and read next test vector
+		vectornum = vectornum + 1;
+		if (vectornum == 1'd7)
+			begin
+			$display("%d test completed with %d errors", vectornum, errors);
+			//$stop;
+			end
+		end
+		end
+
+
+endmodule

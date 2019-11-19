@@ -1,0 +1,88 @@
+ module registerfile #(parameter W = 32) (
+	clk,
+	in, out1, out2, rst, WE, Add1, Add2, Add3
+);
+ 	input clk;
+	//input [W-1:0] in, R15in;
+	input [3:0] Add1, Add2, Add3;
+	output wire [W-1:0] out1, out2;
+	input rst;
+	input WE;
+	input [31:0] in;
+	
+	reg [31:0] reg_mem [15:0];
+	/*wire [15:0] enables;
+	wire [3:0] enable;
+	wire we0,we1,we2,we3,we4,we5,we6,we7,we8,we9,we10,we11,we12,we13,we14,we15;
+	wire [W-1:0] r0out;
+	wire [W-1:0] r1out;
+	wire [W-1:0] r2out;
+	wire [W-1:0] r3out;
+	wire [W-1:0] r4out;
+	wire [W-1:0] r5out;
+	wire [W-1:0] r6out;
+	wire [W-1:0] r7out;
+	wire [W-1:0] r8out;
+	wire [W-1:0] r9out;
+	wire [W-1:0] r10out;
+	wire [W-1:0] r11out;
+	wire [W-1:0] r12out;
+	wire [W-1:0] r13out;
+	wire [W-1:0] r14out;
+	wire [W-1:0] r15out;
+	
+	
+	decoder d1(.in(add1[3:2]), .out(enable));
+	decoder d2(.in(add1[1:0]), .out(enables[3:0]));
+	decoder d3(.in(add1[1:0]), .out(enables[7:4]));
+	decoder d4(.in(add1[1:0]), .out(enables[11:8]));
+	decoder d5(.in(add1[1:0]), .out(enables[15:12]));
+	
+	
+	writeregister R0(.in(in), .write(we0), .rst(rst), .clk(clk), .out(r0out));
+	writeregister R1(.in(in), .write(we1), .rst(rst), .clk(clk), .out(r1out));
+	writeregister R2(.in(in), .write(we2), .rst(rst), .clk(clk), .out(r2out));
+	writeregister R3(.in(in), .write(we3), .rst(rst), .clk(clk), .out(r3out));
+	writeregister R4(.in(in), .write(we4), .rst(rst), .clk(clk), .out(r4out));
+	writeregister R5(.in(in), .write(we5), .rst(rst), .clk(clk), .out(r5out));
+	writeregister R6(.in(in), .write(we6), .rst(rst), .clk(clk), .out(r6out));
+	writeregister R7(.in(in), .write(we7), .rst(rst), .clk(clk), .out(r7out));
+	writeregister R8(.in(in), .write(we8), .rst(rst), .clk(clk), .out(r8out));
+	writeregister R9(.in(in), .write(we9), .rst(rst), .clk(clk), .out(r9out));
+	writeregister R10(.in(in), .write(we10), .rst(rst), .clk(clk), .out(r10out));
+	writeregister R11(.in(in), .write(we11), .rst(rst), .clk(clk), .out(r11out));
+	writeregister R12(.in(in), .write(we12), .rst(rst), .clk(clk), .out(r12out));
+	writeregister R13(.in(in), .write(we13), .rst(rst), .clk(clk), .out(r13out));
+	writeregister R14(.in(in), .write(we14), .rst(rst), .clk(clk), .out(r14out));
+	writeregister R15(.in(R15in), .write(we15), .rst(rst), .clk(clk), .out(r15out));
+	muxsixteen #(.w(W)) m1(.ina(r1out), .inb(r2out), .inc(r3out), .ind(r4out), .ine(r5out), .inf(r6out), .ing(r7out), .inh(r8out), .ini(r9out), .inj(r10out), .ink(r11out), .inl(r12out), .inm(r13out), .inn(r14out), .ino(r15out), .out(out1), .sel(add2[3:0]));
+	muxsixteen #(.w(W)) m2(.ina(r1out), .inb(r2out), .inc(r3out), .ind(r4out), .ine(r5out), .inf(r6out), .ing(r7out), .inh(r8out), .ini(r9out), .inj(r10out), .ink(r11out), .inl(r12out), .inm(r13out), .inn(r14out), .ino(r15out), .out(out2), .sel(add3[3:0]));
+	
+	assign we0 = enables[0] && WE && enable[0];
+	assign we1 = enables[1] && WE && enable[0];
+	assign we2 = enables[2] && WE && enable[0];
+	assign we3 = enables[3] && WE && enable[0];
+	assign we4 = enables[4] && WE && enable[1];
+	assign we5 = enables[5] && WE && enable[1];
+	assign we6 = enables[6] && WE && enable[1];
+	assign we7 = enables[7] && WE && enable[1];
+	assign we8 = enables[8] && WE && enable[2];
+	assign we9 = enables[9] && WE && enable[2];
+	assign we10 = enables[10] && WE && enable[2];
+	assign we11 = enables[11] && WE && enable[2];
+	assign we12 = enables[12] && WE && enable[3];
+	assign we13 = enables[13] && WE && enable[3];
+	assign we14 = enables[14] && WE && enable[3];
+	assign we15 = 1'b1;*/
+	
+	assign out1 = reg_mem[Add1[3:0]];
+	assign out2 = reg_mem[Add2[3:0]];
+
+always @(posedge clk)
+begin
+	if(WE)
+		reg_mem[Add3[3:0]] <= in;
+end
+	
+	
+endmodule

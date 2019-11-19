@@ -1,0 +1,142 @@
+C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/ALU.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/muxsixteen.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/muxsixteen.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module muxsixteen
+
+Top level modules:
+	muxsixteen
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/total.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/total.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module total
+
+Top level modules:
+	total
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/muxtwo.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/muxtwo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module muxtwo
+
+Top level modules:
+	muxtwo
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/raminst.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/raminst.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module raminst
+
+Top level modules:
+	raminst
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/constant_value.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/constant_value.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module constant_value
+
+Top level modules:
+	constant_value
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/muxfour.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/muxfour.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module muxfour
+
+Top level modules:
+	muxfour
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/simpleregister.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/simpleregister.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module simpleregister
+
+Top level modules:
+	simpleregister
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/ram.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/ram.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ram
+
+Top level modules:
+	ram
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/adder.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/writeregister.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/writeregister.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module writeregister
+
+Top level modules:
+	writeregister
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/maincontroller.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/maincontroller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module maincontroller
+
+Top level modules:
+	maincontroller
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/fourthData.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/fourthData.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fourthData
+
+Top level modules:
+	fourthData
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/shiftregister.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/shiftregister.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shiftregister
+
+Top level modules:
+	shiftregister
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v {2 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module registerfile
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(19): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(23): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(24): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(25): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/registerfile.v(26): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	registerfile
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/shift.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/shift.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shift
+
+Top level modules:
+	shift
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/decoder.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/decoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module decoder
+
+Top level modules:
+	decoder
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/extend.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/extend.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module extend
+
+Top level modules:
+	extend
+
+} {} {}} C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/test_fourthData.v {1 {vlog -work work -stats=none C:/Users/Alper.Alper-Alper/Desktop/Verilog/fourth/test_fourthData.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module test_fourthData
+
+Top level modules:
+	test_fourthData
+
+} {} {}}

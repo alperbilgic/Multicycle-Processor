@@ -1,0 +1,11 @@
+module extend (
+	ImmSrc,
+	in, out
+);
+	input [1:0] ImmSrc;
+	input [23:0] in;
+	output [31:0] out;
+
+	assign out = ImmSrc[1] ? (ImmSrc[0] ? {32'bz} : {in[23], in[23], in[23], in[23], in[23], in[23], in[23:0], 2'b00}) : (ImmSrc[0] ? {20'b00000000000000000000, in[11:0]} : {24'b000000000000000000000000,in[7:0]});
+
+endmodule

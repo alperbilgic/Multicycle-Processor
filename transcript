@@ -1,0 +1,107 @@
+vsim -gui work.test_fifth work.connected
+# vsim -gui work.test_fifth work.connected 
+# Start time: 12:09:03 on May 15,2019
+# Loading work.test_fifth
+# Loading work.connected
+# Loading work.controller
+# Loading work.fourthData
+# Loading work.writeregister
+# Loading work.muxtwo
+# Loading work.ALU
+# Loading work.simpleregister
+# Loading work.muxfour
+# Loading work.registerfile
+# Loading work.constant_value
+# Loading work.adder
+# Loading work.ram
+# Loading work.extend
+# Loading work.shift
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/test_fifth.v(20): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /test_fifth/dut File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/test_fifth.v(20): [TFMPC] - Missing connection for port 'states'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Too few port connections. Expected 29, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /test_fifth/dut/b2v_inst1 File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'C_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'OVF'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCWr'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ALU'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCout'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ram_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD1'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD2'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'WD'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /test_fifth/dut/b2v_inst1/b2v_insttt File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/muxfour.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Missing connection for port 'ind'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Too few port connections. Expected 29, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /connected/b2v_inst1 File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'C_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'OVF'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCWr'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ALU'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCout'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ram_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD1'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD2'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'WD'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /connected/b2v_inst1/b2v_insttt File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/muxfour.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Missing connection for port 'ind'.
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+{sim:/test_fifth/dut/b2v_inst1/b2v_inst18/registers[0]}
+add wave -position insertpoint  \
+sim:/test_fifth/dut/b2v_inst1/b2v_inst/out
+add wave -position insertpoint  \
+sim:/test_fifth/dut/b2v_inst/instructi
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+{sim:/test_fifth/dut/b2v_inst1/b2v_inst18/registers[6]}
+restart
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/test_fifth.v(20): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /test_fifth/dut File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/test_fifth.v(20): [TFMPC] - Missing connection for port 'states'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Too few port connections. Expected 29, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /test_fifth/dut/b2v_inst1 File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'C_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'OVF'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCWr'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ALU'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCout'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ram_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD1'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD2'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'WD'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /test_fifth/dut/b2v_inst1/b2v_insttt File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/muxfour.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Missing connection for port 'ind'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Too few port connections. Expected 29, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /connected/b2v_inst1 File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'C_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'OVF'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCWr'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ALU'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'PCout'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'ram_out'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD1'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'RD2'.
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/connected.v(66): [TFMPC] - Missing connection for port 'WD'.
+# ** Warning: (vsim-3017) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /connected/b2v_inst1/b2v_insttt File: C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/muxfour.v
+# ** Warning: (vsim-3722) C:/Users/Alper.Alper-Alper/Desktop/Verilog/lab_sonrasi/fourth/fourthData.v(331): [TFMPC] - Missing connection for port 'ind'.
+run
+run
+run
+                                                                                       
