@@ -102,60 +102,39 @@ A sample code was loaded to the memory for test. Which can be written in assembl
   
   END
 
-sub 1   
+sub 1   // takes 2's complement of 25
         
-        MOV R0, #0;
-        
-        MOV R1, #25;
-        
-        SUB R0, R1;
-        
-        BX  LR
+        MOV R0, #0;  
+        MOV R1, #25;  
+        SUB R0, R1;  
+        BX  LR  
 
-sub2    
+sub2    // gets the sum of an array
         
-        LDR R0, #164;
-        
-        LDR R1, #168;
-        
-        ADD R0, R0, R1;
-        
-        LDR R1, #172;
-        
-        ADD R0, R0, R1;
-        
-        LDR R1, #176;
-        
-        ADD R0, R0, R1;
-        
-        LDR R1, #180;
-        
-        ADD R0, R0, R1;
+        LDR R0, #164;  
+        LDR R1, #168;  
+        ADD R0, R0, R1;  
+        LDR R1, #172;  
+        ADD R0, R0, R1;  
+        LDR R1, #176;  
+        ADD R0, R0, R1;  
+        LDR R1, #180;  
+        ADD R0, R0, R1;  
 
-sub3    
+sub3    // manipulates the moved number regarding it's evenness oddity
         
-        MOV R0, #88;
-        
-        LSL R1, R0;
-        
-        MOV R2, #12;
-        
-        SUBS R1, R2;
-        
-        BEQ ;
-        
-        LSL R0, #4;
-        
-        ROR R0, #4;
-        
-        BUN end
+        MOV R0, #88;  
+        LSL R1, R0;  
+        MOV R2, #12;  
+        SUBS R1, R2;  
+        BEQ end;  
+        LSL R0, #4;  
+        ROR R0, #4;  
+        BUN end  
 branch  
         
-        LSR R0, #1;
-        
-        ROL R0, #4;
-        
+        LSR R0, #1;  
+        ROL R0, #4;  
 end     
 
-        BX  LR
-        
+        BX  LR  
