@@ -103,6 +103,7 @@ A sample code was loaded to the memory for test. Which can be written in assembl
   END
 
 sub 1   
+        
         MOV R0, #0;
         
         MOV R1, #25;
@@ -112,6 +113,7 @@ sub 1
         BX  LR
 
 sub2    
+        
         LDR R0, #164;
         
         LDR R1, #168;
@@ -131,6 +133,7 @@ sub2
         ADD R0, R0, R1;
 
 sub3    
+        
         MOV R0, #88;
         
         LSL R1, R0;
@@ -147,9 +150,12 @@ sub3
         
         BUN end
 branch  
+        
         LSR R0, #1;
         
         ROL R0, #4;
         
-end     BX  LR
+end     
+
+        BX  LR
         
