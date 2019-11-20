@@ -113,6 +113,7 @@ sub2    // gets the sum of an array
         ADD R0, R0, R1;  
         LDR R1, #180;  
         ADD R0, R0, R1;  
+        BX  LR
 
 sub3    // manipulates the moved number regarding it's evenness oddity
         
@@ -120,7 +121,7 @@ sub3    // manipulates the moved number regarding it's evenness oddity
         LSL R1, R0;  
         MOV R2, #12;  
         SUBS R1, R2;  
-        BEQ end;  
+        BEQ branch;  
         LSL R0, #4;  
         ROR R0, #4;  
         BUN end  
