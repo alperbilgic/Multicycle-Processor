@@ -49,7 +49,7 @@ The designed architecture has one memory module that includes data and instructi
   
 ### Finding Binary Equivalent of an Instruction  
 
-Mapping of bits:  
+##### Mapping of bits:  
   2 Bits | 4 Bits| 3 Bits| 3 Bits|  8 Bits  
     OP   | Func  | Reg 1 | Reg 2 | Immediate  
     OP: Operation type ( Memory = 01, branch = 10, arithmetic or logic = 00)  
